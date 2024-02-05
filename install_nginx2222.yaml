@@ -10,3 +10,5 @@
         placement:
           constraints:
             - node.role == worker
+        publish:
+          - 8456:80
