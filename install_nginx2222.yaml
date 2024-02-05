@@ -10,5 +10,5 @@
         placement:
           constraints:
             - node.role == worker
-        ports:
+        publish:
           - 8011:80
