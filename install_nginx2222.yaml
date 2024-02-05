@@ -5,7 +5,7 @@
   tasks:
     - name: Install Nginx on Worker Nodes
       docker_swarm_service:
-        name: nginx_service
+        name: install nginx
         image: nginx
         placement:
           constraints:
