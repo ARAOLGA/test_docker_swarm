@@ -1,12 +1,8 @@
 ---
-- name: Install Nginx on Worker Nodes
+- name: nginx 배포하기
   hosts: all
-  become: true
+  become: yes
+  
   tasks:
-    - name: Install Nginx on Worker Nodes
-      docker_swarm_service:
-        name: nginx_service
-        image: nginx
-        placement:
-          constraints:
-            - node.role == worker
+    - name: nginx
+      shell: docker service create --name mynginx --replicas 3 --constraint node.role==worker --with-registry-auth -p 8008:80 nginx 
