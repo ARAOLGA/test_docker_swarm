@@ -1,0 +1,14 @@
+---
+- name: Install Nginx on Worker Nodes
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Nginx on Worker Nodes
+      docker_swarm_service:
+        name: install-nginx
+        image: nginx
+        placement:
+          constraints:
+            - node.role == worker
+        ports:
+          - "8080:80"
