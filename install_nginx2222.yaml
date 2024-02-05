@@ -1,6 +1,6 @@
 ---
 - name: Install Nginx on Worker Nodes
-  hosts: swarm_nodes
+  hosts: all
   become: true
   tasks:
     - name: Install Nginx on Worker Nodes
