@@ -10,3 +10,5 @@
         placement:
           constraints:
             - node.role == worker
+        ports:
+          - 8011:80
