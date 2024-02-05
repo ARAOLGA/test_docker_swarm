@@ -11,6 +11,7 @@
           constraints:
             - node.role == worker
         publish:
-          - published_port: "8888"
-            target_port: 80
-            protocol: tcp
+        - published_port: "8888"
+          target_port: 80
+          protocol: tcp
+          mode: host
