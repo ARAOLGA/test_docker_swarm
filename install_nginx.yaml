@@ -1,6 +1,6 @@
 ---
 - name: Install Nginx on Worker Nodes
-  hosts: localhost
+  hosts: all
   become: true
   tasks:
     - name: Install Nginx on Worker Nodes
