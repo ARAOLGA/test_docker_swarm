@@ -11,4 +11,4 @@
           constraints:
             - node.role == worker
         publish:
-          - 8011:80
+          - "8011:80"
